@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+IN:wght@100..400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.navbar-nav {
+    font-family: "Work Sans", sans-serif;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    font-size: 20px;
+}
+ 
+.navbar-nav .nav-item{
+    margin: 0 10px;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: center;
+}
+
+.addblog {
+    font-family: "Work Sans", sans-serif;;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px; 
+    background-color: #ccd5ae;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.addblog h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.create-form {
+    margin-bottom: 20px;
+}
+
+
+.create-form p {
+    margin-bottom: 10px;
+}
+
+.create-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1c2127;
+    font-weight: bold;
+}
+
+
+.create-form input[type="text"],
+.create-form input[type="date"],
+.create-form textarea,
+.create-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.create-form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.create-form select {
+    appearance: none; 
+    -webkit-appearance: none;  
+    -moz-appearance: none;     
+    padding-right: 30px; 
+}
+
+.create-form select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+
+.create button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.create button:hover {
+    background-color: #0056b3;
+}

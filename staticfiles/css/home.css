@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+IN:wght@100..400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.navbar-nav {
+  font-family: "Work Sans", sans-serif;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
+  font-size: 20px;
+}
+
+.navbar-nav .nav-item{
+  margin: 0 10px;
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: center;
+}
+

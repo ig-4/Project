@@ -1,0 +1,22 @@
+{% load static %}
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    {% endblock css%}
+
+<body>
+    <div class="container">
+        <form action="" method="post">
+        {% csrf_token %}
+            <h2> Login Form </h2>
+            <input type="text" id="username" name="username" placeholder="Username"  required>
+            <input type="password" id="password" class="pw" name="password" placeholder="Password" required>
+            <br/>
+            <input type="checkbox" required onclick="checkpassword()"> Show Password
+            <button type="submit"> Login </button>
+    
+            <p> Don't have an account? <a href="{% url 'register' %}"> Register here </a></p>
+        </form>    
+    </div>
+    <script src="{% static 'js/login.js' %}"></script>
+</body>
+</html>

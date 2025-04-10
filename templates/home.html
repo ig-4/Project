@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <br/><br/>
+    <h1> Posts </h1>
+    <br/>
+    {% for article in object_list %}
+        <div class="blog-post-box">
+            <h3>
+                <a href="{% url 'article-detail' article.pk %}">
+                    {{article.title}}
+                </a>
+            </h3>
+            <p>
+                Category: <a href="{% url 'category' article.category %}">{{article.category}}</a><br>
+                Author: {{article.author }}<br>
+                Date: {{article.date}}
+            </p>
+            <small>
+                {% if user.is_authenticated %}
+                    {% if user.id == article.author.id %}
+                        <a href="{% url 'update_post' article.pk %}"> (Edit) </a> 
+                        <a href="{% url 'delete_post' article.pk %}"> (Delete) </a><br/>
+                    {% endif %}
+                {% endif %}
+            </small> <br/>
+            {{article.content|slice:":200"|safe }}
+        </div>
+        <br/>
+    {% endfor %}
+</div>
+{% endblock content %}

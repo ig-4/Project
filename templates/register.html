@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Register Page </title>
+
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    {% endblock css %}
+</head>
+<body>
+    <div class="container">
+        <div class="intro">
+            <br/><br/>
+            <h1 style="color: #fff;">Welcome To Blogger's Haven!</h1>
+             <br/>
+            <p>
+                We simplify blogging for individuals and businesses, 
+                empowering content creators to effortlessly write, manage, 
+                and share their blogs, while engaging with their audience.
+            </p>
+            <br/><br/>
+        </div>
+        <div class="form-section">
+            <h2> Create An Account </h2>
+            <form action="" method="post" name="form" onsubmit="return validateForm()">
+            {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit"> Create Account </button>
+                <p style="text-align: center;"> Already have an account? <a href="{% url 'login' %}"> Login Here </a></p>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
